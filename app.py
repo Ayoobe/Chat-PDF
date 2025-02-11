@@ -83,14 +83,14 @@ def main():
         with st.chat_message(message["role"]):
             st.markdown(message["text"])
     
-    # Input field for user questions
+
     user_input = st.chat_input("Ask me anything about your PDFs", key="user_input")
     if user_input:
         handle_input(user_input)
         
         
     
-    # Sidebar for PDF upload and other controls
+    
     with st.sidebar:
         st.subheader("Your PDFs 📖")
         pdf_docs = st.file_uploader("Upload your PDFs", accept_multiple_files=True)
