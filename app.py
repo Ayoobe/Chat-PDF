@@ -92,6 +92,7 @@ def main():
     
     
     with st.sidebar:
+        st.image("logo.png", width=50)
         st.subheader("Your PDFs 📖")
         pdf_docs = st.file_uploader("Upload your PDFs", accept_multiple_files=True)
         
