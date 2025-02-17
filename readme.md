@@ -14,8 +14,8 @@ PiDiF GPT is a very basic Streamlit-based chatbot that allows users to interact 
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone https://github.com/Ayoobe/Chat-PDF.git
+cd Chat-PDF
 ```
 
 ### 2. Create a virtual environment (Recommended)
