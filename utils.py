@@ -32,13 +32,17 @@ def get_vectorstore(text_chunks):
     return vectorstore
 
 def get_conversation_chain(vectorstore):
+
     llm = ChatGroq(
     model_name="llama-3.3-70b-versatile",
     temperature=0
     )
+
     mem= ConversationBufferMemory(memory_key="chat_history", return_messages=True)
     chain = ConversationalRetrievalChain.from_llm(
-    llm=llm, 
-    retriever=vectorstore.as_retriever(), 
-    memory=mem)    
+        llm=llm, 
+        retriever=vectorstore.as_retriever(), 
+        memory=mem
+    )   
+     
     return chain

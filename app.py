@@ -7,7 +7,7 @@ from utils import get_pdf_text, get_chunks, get_vectorstore, get_conversation_ch
 from rich.console import Console
 from rich.logging import RichHandler
 
-# Setup logging with Rich
+
 console = Console()
 logging.basicConfig(
     level=logging.INFO,
@@ -51,7 +51,7 @@ def handle_input(user_input):
             st.markdown(user_input)
 
         with st.spinner("Thinking..."):
-            time.sleep(2)  #thinking delay
+            time.sleep(2)  
             input_data = {
                 'question': user_input,
                 'chat_history': st.session_state.messages  
@@ -89,8 +89,6 @@ def main():
         handle_input(user_input)
         
         
-    
-    
     with st.sidebar:
         st.image("logo.png", width=50)
         st.subheader("Your PDFs 📖")
